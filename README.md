@@ -19,7 +19,7 @@ license: mit
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)]()
 [![Meta x Scaler Hackathon](https://img.shields.io/badge/Meta%20×%20Scaler-PyTorch%20OpenEnv%20Hackathon-blue)]()
 
----
+
 
 ## Overview
 
