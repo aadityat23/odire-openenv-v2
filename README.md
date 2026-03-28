@@ -1,5 +1,5 @@
 ---
-title: ODIRE - OpenEnv Pipeline RL Environment
+Title: ODIRE - OpenEnv Pipeline RL Environment
 emoji: 🚀
 colorFrom: purple
 colorTo: indigo
