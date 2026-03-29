@@ -4,7 +4,8 @@
 ODIRE is a reinforcement learning environment where an agent learns to autonomously debug failed ETL pipelines by selecting actions (inspect logs → fix schema → clean data → rerun) to maximize reward and restore pipeline success.
 
 ## 🎥 Demo Video
-[Your YouTube Link Here]
+(https://youtu.be/zLQY4cq-TFs)
+
 
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-aadi2026%2Fodire--openenv-yellow)](https://huggingface.co/spaces/aadi2026/odire-openenv)
 [![OpenEnv Compatible](https://img.shields.io/badge/OpenEnv-Compatible-blueviolet)]()
