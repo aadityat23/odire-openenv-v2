@@ -1,0 +1,62 @@
+name: odire-openenv
+version: "1.0.0"
+description: >
+  An OpenEnv-compliant Reinforcement Learning environment for autonomous
+  ETL pipeline failure diagnosis and remediation.
+
+author: aadi2026
+space_url: https://huggingface.co/spaces/aadi2026/odire-openenv
+
+environment:
+  type: reinforcement_learning
+  api:
+    reset: /reset
+    step: /step
+    state: /state
+  action_space:
+    type: discrete
+    n: 4
+    actions:
+      - inspect_logs
+      - fix_schema
+      - clean_data
+      - rerun_pipeline
+  observation_space:
+    type: dict
+    fields:
+      - status
+      - pipeline_stage
+      - logs
+      - data_quality
+      - schemas
+      - alerts
+      - schema_fixed
+      - data_cleaned
+      - logs_inspected
+      - step
+      - episode_reward
+      - action_history
+  reward_range: [-1.0, 1.5]
+  max_steps:
+    easy: 4
+    medium: 6
+    hard: 8
+
+tasks:
+  - id: task_easy
+    difficulty: easy
+    description: Resolve a minor ETL pipeline failure with schema mismatch and low data quality
+    grader: graders.easy_grader
+    max_score: 1.0
+
+  - id: task_medium
+    difficulty: medium
+    description: Resolve a moderate ETL pipeline failure requiring correct action sequencing
+    grader: graders.medium_grader
+    max_score: 1.0
+
+  - id: task_hard
+    difficulty: hard
+    description: Resolve a complex ETL pipeline failure with ordering constraints and cascading faults
+    grader: graders.hard_grader
+    max_score: 1.0
